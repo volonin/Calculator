@@ -5,8 +5,13 @@ for (i of left){
     i.addEventListener("click", outputNumber)
 }
 function outputNumber (){
-    let res = Number(this.firstElementChild.innerHTML);
-    output.lastElementChild.innerHTML += res;
+    let res = this.firstElementChild.innerHTML;
+    if (res === "."){
+        output.lastElementChild.innerHTML += res;
+    }else{
+        output.lastElementChild.innerHTML += Number(res);
+    }
+
 }
 let deleted = document.querySelectorAll(".del");
 let ac = deleted[0];
@@ -16,6 +21,8 @@ ac.addEventListener("click", function (){
     output.lastElementChild.innerHTML = "";
     output.firstElementChild.innerHTML = "";
     completed = false;
+    value1 = 0;
+    value2 = 0;
 })
 del.addEventListener("click", function () {
     output.firstElementChild.innerHTML = "";
@@ -30,6 +37,7 @@ let equals = symbol[4];
 let divide = symbol[0];
 let value1 = 0;
 let value2 = 0;
+let value3 = 0;
 let completed = false;
 symbol = "";
 takingAway.addEventListener("click", multFunction);
@@ -51,7 +59,8 @@ equals.addEventListener("click", function equalsFunction () {
         switch (String(symbol)){
             case "+":output.lastElementChild.innerHTML = `${value1 + value2}`;
                 break;
-            case "/": output.lastElementChild.innerHTML = `${value1 / value2}`;
+            case "/": value3 = value1 / value2;
+                output.lastElementChild.innerHTML = `${value3.toFixed(5)}`;
                 break;
             case "*": output.lastElementChild.innerHTML = `${value1 * value2}`;
                 break;
@@ -64,12 +73,14 @@ equals.addEventListener("click", function equalsFunction () {
         switch (String(symbol)){
             case "+":output.lastElementChild.innerHTML = `${value1 + value2}`;
                 break;
-            case "/": output.lastElementChild.innerHTML = `${value1 / value2}`;
+            case "/":value3 = value1 / value2;
+                output.lastElementChild.innerHTML = `${value3.toFixed(5)}`;
                 break;
             case "*": output.lastElementChild.innerHTML = `${value1 * value2}`;
                 break;
             case "-": output.lastElementChild.innerHTML = `${value1 - value2}`;
                 break;
         }
+        output.firstElementChild.innerHTML = `${value1}+${value2}`;
     }
 })

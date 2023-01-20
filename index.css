@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(font/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(font/Poppins-Regular.ttf);
+}
 @keyframes pulse {
     from {
         transform: scale(.85);
@@ -20,7 +28,6 @@
         transform: scale(1);
     }
 }
-
 body{
     margin: 0;
     overflow-y:hidden;
@@ -31,6 +38,9 @@ main{
     width: 100%;
     min-height: 100vh;
     margin: auto;
+}
+main .calculator .literal .number{
+    font-family: Poppins-Medium;
 }
 main .ellipse{
     border-radius: 200px;
@@ -94,6 +104,7 @@ main .calculator .output{
     align-items: start;
     color: white;
     font-size: 35px;
+    font-family: Poppins-Medium;
 }
 main .calculator .output .right-side-output{
     display: flex;
@@ -106,7 +117,7 @@ main .calculator .output .right-side-output .display-sec{
     color: #d0d0d0;
 }
 main .calculator .output .right-side-output .display-main{
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: right;
 }
 main .calculator .literal{
