@@ -1,0 +1,190 @@
+@keyframes pulse {
+    from {
+        transform: scale(.85);
+    }
+    50% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.85);
+    }
+}
+@keyframes pulse1 {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.85);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+body{
+    margin: 0;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+main{
+    background-color: #F2CFBB;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+}
+main .ellipse{
+    border-radius: 200px;
+    width: 350px;
+    height: 350px;
+    background-color: #FF7629;
+    position: absolute;
+    top: -180px; left: -180px;
+}
+main .secondElips{
+    top: 80%; left: 88%;
+}
+main .ellipseInverst{
+    border-radius: 200px;
+    width: 300px;
+    height: 300px;
+    background-color: #FF7629;
+    position: absolute;
+    top: 600px; left: 1100px;
+}
+main .ellipseCenter{
+    border-radius: 300px;
+    width: 370px;
+    height: 370px;
+    background-color: rgba(255, 118, 41, 0.29);
+    position: absolute;
+    top: 30px; left: 36.5vw;
+    /*animation*/
+    animation: pulse 6s ease-in-out infinite;
+}
+main .ellipseCenter2{
+    border-radius: 300px;
+    width: 370px;
+    height: 370px;
+    background-color: #FF7629;
+    position: absolute;
+    top: 370px; left: 36.5vw;
+    animation: pulse1 6s ease-in-out infinite;
+}
+main .calculator{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(23, 24, 26, 1);
+    position: absolute;
+    left: 39.6vw; top: 120px;
+    width: 270px;
+    height: 530px;
+    border-radius: 40px;
+    z-index: 1;
+    box-shadow: 50px 20px 70px rgba(0, 0, 0, 0.57);
+}
+main .calculator .output{
+    /*background-color: #FF7629;*/
+    display: flex;
+    justify-content: right;
+    height: 200px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    align-items: start;
+    color: white;
+    font-size: 35px;
+}
+main .calculator .output .right-side-output{
+    display: flex;
+    flex-direction: column;
+}
+main .calculator .output .right-side-output .display-sec{
+    margin-top: 40px;
+    font-size: 25px;
+    text-align: right;
+    color: #d0d0d0;
+}
+main .calculator .output .right-side-output .display-main{
+    margin-top: 60px;
+    text-align: right;
+}
+main .calculator .literal{
+    display: flex;
+}
+main .calculator .literal .leftt .top{
+    display: flex;
+}
+main .calculator .literal .leftt .footer{
+    display: flex;
+}
+main .calculator .column1{
+    display: flex;
+}
+main .calculator .del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #616161;
+    border-radius: 12px;
+    height: 45px;
+    width: 45px;
+    margin: 20px 0 0 15px;
+    border: 0;
+    font-size: 18px;
+    color: #E5E5E5;
+    z-index: 2;
+}
+main .calculator .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303136;
+    border: 0;
+    border-radius: 12px;
+    height: 45px;
+    width: 45px;
+    margin: 12px 0 0 15px;
+    font-size: 22px;
+    color: #FF7629;
+    z-index: 2;
+}main .calculator .left{
+    margin-left: 20px;
+ }
+
+main .calculator .column2{
+    display: flex;
+    margin-left: 0;
+}
+
+main .calculator .symbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF7629;
+    border-radius: 12px;
+    height: 45px;
+    border: 0;
+    width: 45px;
+    margin: 12px 0 0 15px;
+    font-size: 27px;
+    color: black;
+    z-index: 2;
+}
+main .calculator .literal .first{
+    margin-top:20px
+}
+main .calculator .literal .lengh{
+    height: 74px;
+}
+main .calculator .literal .right .column3 .equals{
+    color: black;
+    background-color: white;
+}
+main .calculator .literal .leftt .footer .zero{
+    width: 110px;
+}
+main .calculator .literal .right .column3{
+    display: flex;
+    flex-direction: column;
+}
